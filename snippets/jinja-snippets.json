@@ -1,0 +1,11 @@
+{
+    "Jinja - Link Static File": {
+		"scope": "html",
+		"prefix": "pt-jurl",
+		"body": [
+			"{{ url_for('static', filename='$1') }}$0"
+		],
+		"description": "Link static file with Jinja"
+	}
+
+}

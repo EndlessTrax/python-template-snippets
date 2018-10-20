@@ -1,5 +1,5 @@
 {
-    "New Jinja HTML Template": {
+    "New HTML Template": {
 		"scope": "html",
 		"prefix": "ptnew",
 		"body": [
@@ -15,7 +15,7 @@
 		"description": "Creates the base Jinja / Django template for a new HTML file"
 	},
 
-	"Jinja Variable": {
+	"Jinja / Django Variable": {
 		"scope": "html",
 		"prefix": "ptvar",
 		"body": [
@@ -24,22 +24,13 @@
 		"description": "Opens variable tags"
 	},
 
-	"Jinja Code Block": {
+	"Template Code Block": {
 		"scope": "html",
 		"prefix": "ptcode",
 		"body": [
 			"{% $1 %}$0"
 		],
 		"description": "Opens code block tags"
-	},
-
-	"Jinja - Link Static File": {
-		"scope": "html",
-		"prefix": "pt-jurl",
-		"body": [
-			"{{ url_for('static', filename='$1') }}$0"
-		],
-		"description": "Link static file with Jinja"
 	}
 
 }
