@@ -1,0 +1,45 @@
+{
+    "New Jinja HTML Template": {
+		"scope": "html",
+		"prefix": "ptnew",
+		"body": [
+			"{% extends '${1:base.html}' %}",
+			"\n",
+			"{% block content %}",
+			"\t$2",
+			"{% endblock content %}",
+			"\n",
+			"{% block scripts %}",
+			"{% endblock scripts %}"
+		],
+		"description": "Creates the base Jinja / Django template for a new HTML file"
+	},
+
+	"Jinja Variable": {
+		"scope": "html",
+		"prefix": "ptvar",
+		"body": [
+			"{{ $1 }}$0"
+		],
+		"description": "Opens variable tags"
+	},
+
+	"Jinja Code Block": {
+		"scope": "html",
+		"prefix": "ptcode",
+		"body": [
+			"{% $1 %}$0"
+		],
+		"description": "Opens code block tags"
+	},
+
+	"Jinja - Link Static File": {
+		"scope": "html",
+		"prefix": "pt-jurl",
+		"body": [
+			"{{ url_for('static', filename='$1') }}$0"
+		],
+		"description": "Link static file with Jinja"
+	}
+
+}
