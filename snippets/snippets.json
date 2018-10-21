@@ -24,6 +24,15 @@
 		"description": "Adds variable tags"
 	},
 
+	"Template Variable with Filter": {
+		"scope": "html",
+		"prefix": "ptfilt",
+		"body": [
+			"{{ $1 | $2 }}$0"
+		],
+		"description": "Adds variable tags with filter"
+	},
+
 	"Template Code Block": {
 		"scope": "html",
 		"prefix": "ptcode",
