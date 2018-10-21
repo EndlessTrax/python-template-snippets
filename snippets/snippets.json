@@ -12,16 +12,16 @@
 			"{% block scripts %}",
 			"{% endblock scripts %}"
 		],
-		"description": "Creates the base Jinja / Django template for a new HTML file"
+		"description": "Creates a simple base Jinja / Django template for a new HTML file"
 	},
 
-	"Jinja / Django Variable": {
+	"Template Variable": {
 		"scope": "html",
 		"prefix": "ptvar",
 		"body": [
 			"{{ $1 }}$0"
 		],
-		"description": "Opens variable tags"
+		"description": "Adds variable tags"
 	},
 
 	"Template Code Block": {
@@ -30,7 +30,97 @@
 		"body": [
 			"{% $1 %}$0"
 		],
-		"description": "Opens code block tags"
+		"description": "Adds code block tags"
+	},
+
+	"Template Block Tag": {
+		"scope": "html",
+		"prefix": "ptblock",
+		"body": [
+			"{% block $1 %}",
+			"\t$0",
+			"{% endblock $1 %}"
+		],
+		"description": "Adds code block tags"
+	},
+
+	"Template For Loop": {
+		"scope": "html",
+		"prefix": "ptfor",
+		"body": [
+			"{% for $1 in $2 %}",
+			"\t$0",
+			"{% endfor %}"
+		],
+		"description": "Adds for loop"
+	},
+
+	"Template If Statement": {
+		"scope": "html",
+		"prefix": "ptif",
+		"body": [
+			"{% if $1 %}",
+			"\t$0",
+			"{% endif %}"
+		],
+		"description": "Adds if statement"
+	},
+
+	"Template Super": {
+		"scope": "html",
+		"prefix": "ptsup",
+		"body": [
+			"{{ super() }}"
+		],
+		"description": "Adds Super() tag"
+	},
+
+	"Template Extends": {
+		"scope": "html",
+		"prefix": "ptext",
+		"body": [
+			"{% extends '${1:base.html}' %}$0"
+		],
+		"description": "Add extends tag"
+	},
+
+	"Template If/Else Statement": {
+		"scope": "html",
+		"prefix": "ptifel",
+		"body": [
+			"{% if $1 %}",
+			"\t$2",
+			"{% else %}",
+			"\t$3",
+			"{% endif %}"
+		],
+		"description": "Adds if/else statement"
+	},
+
+	"Template If/Elif/Else Statement": {
+		"scope": "html",
+		"prefix": "ptelif",
+		"body": [
+			"{% if $1 %}",
+			"\t$2",
+			"{% elif $3 %}",
+			"\t$4",
+			"{% else %}",
+			"\t$5",
+			"{% endif %}"
+		],
+		"description": "Adds if/elif/else statement"
+	},
+
+	"Template With Statement": {
+		"scope": "html",
+		"prefix": "ptwith",
+		"body": [
+			"{% with $1 %}",
+			"\t$0",
+			"{% endwith %}"
+		],
+		"description": "Adds with statement"
 	}
 
 }

@@ -6,6 +6,16 @@
 			"{{ url_for('static', filename='$1') }}$0"
 		],
 		"description": "Link static file with Jinja"
-	}
+	},
 
+	"Jinja - Macros": {
+		"scope": "html",
+		"prefix": "pt-jmac",
+		"body": [
+			"{% macro $1 %}",
+			"\t$0",
+			"{% endmacro %}"
+		],
+		"description": "Adds macro tags"
+	}
 }

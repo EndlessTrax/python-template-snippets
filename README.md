@@ -6,6 +6,10 @@ This VS Code snippet extension includes snippets for both the Jinja2 and Django 
 
 To install this extension during development copy it into your local `<user home>/.vscode/extensions` folder and restart VS Code.
 
+## Settings
+
+Works best with `editor.tabCompletion` enabled (`on`) in your VS Code `Settings`.
+
 ## Features
 
 Coming soon...
@@ -20,7 +24,7 @@ Coming soon...
 
 ### 0.0.1
 
-Initial development
+- Initial development
 
 -----------------------------------------------------------------------------------------------------------
 
