@@ -1,16 +1,16 @@
 {
     "Django - Url Tags": {
 		"scope": "html",
-		"prefix": "pt-durl",
+		"prefix": "ptd-url",
 		"body": [
 			"{% url '$1' $2%}$0"
 		],
 		"description": "Adds Django URL block"
-    },
+		},
     
     "Django - Load tags": {
 		"scope": "html",
-		"prefix": "pt-dload",
+		"prefix": "ptd-load",
 		"body": [
 			"{% load $1 %}$0"
 		],
@@ -19,7 +19,7 @@
     
     "Django - Static File": {
 		"scope": "html",
-		"prefix": "pt-dstat",
+		"prefix": "ptd-stat",
 		"body": [
 			"{% static '$1' %}$0"
 		],
