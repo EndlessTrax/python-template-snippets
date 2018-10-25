@@ -8,8 +8,8 @@
         "Django", 
         "Jinja2"
     ],
-    "version": "1.0",
-    "publisher": "Ricky White",
+    "version": "1.0.0",
+    "publisher": "RickyWhite",
     "engines": {
         "vscode": "^1.28.0"
     },

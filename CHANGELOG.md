@@ -2,7 +2,7 @@
 
 See below for details of all version changes and upgrades.
 
-## [v1.0]
+## [v1.0.0]
 
 - Initial version **deployed**! - *Gives self pat on the back.*
 - General code snippets
