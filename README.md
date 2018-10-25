@@ -1,4 +1,4 @@
-# Python Template Snippets README
+# Python Template Snippets
 
 This VS Code snippet extension includes snippets for both the Jinja2 and Django template engines.
 
@@ -66,6 +66,6 @@ ptd-stat | {% static ' `*` ' %}
 
 ---
 
-This snippet was authored by [Ricky White](https://rickywhite.net/), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets).
+This snippet was authored by [Ricky White](https://rickywhite.net/), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues).
 
 **Happy Coding!**

@@ -1,8 +1,14 @@
 {
     "name": "python-template-snippets",
     "displayName": "Python Template Snippets",
-    "description": "A code snippet extension for Jinja and Django templating engines.",
-    "version": "0.0.1",
+    "description": "A snippet extension for Jinja and Django templating engines.",
+    "keywords": [
+        "Python", 
+        "Snippets", 
+        "Django", 
+        "Jinja2"
+    ],
+    "version": "1.0",
     "publisher": "Ricky White",
     "engines": {
         "vscode": "^1.28.0"
@@ -25,5 +31,11 @@
                 "path": "./snippets/django-snippets.json"
             }
         ]
-    }
+    },
+    "icon": "logo.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/EndlessTrax/python-template-snippets"
+    },
+    "homepage": "https://github.com/EndlessTrax/python-template-snippets/blob/master/README.md"
 }
