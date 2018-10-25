@@ -8,7 +8,9 @@ If there is a snippet that is not included in this extension, please open an iss
 
 ## Setup
 
-To install this extension during development copy it into your local `<user home>/.vscode/extensions` folder and restart VS Code.
+Just hit install!
+
+If installing this extension directly from the repo, copy it into your local `<user home>/.vscode/extensions` folder and restart VS Code.
 
 Works best with `editor.tabCompletion` enabled (`on`) in your VS Code `Settings`.
 
