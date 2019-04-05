@@ -64,7 +64,7 @@ ptd-stat | {% static ' `*` ' %}
 
 ### 1.1
 
-- Extra Snippet added. See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/CHANGELOG.md)
+- Extra Snippet added. See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/blob/master/CHANGELOG.md)
 
 ### 1.0.0
 
