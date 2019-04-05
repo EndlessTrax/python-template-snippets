@@ -1,28 +1,29 @@
 {
-    "Django - Url Tags": {
-		"scope": "html",
-		"prefix": "ptd-url",
-		"body": [
-			"{% url '$1' $2%}$0"
-		],
-		"description": "Adds Django URL block"
-		},
-    
-    "Django - Load tags": {
-		"scope": "html",
-		"prefix": "ptd-load",
-		"body": [
-			"{% load $1 %}$0"
-		],
-		"description": "Adds Load Block"
-    },
-    
-    "Django - Static File": {
-		"scope": "html",
-		"prefix": "ptd-stat",
-		"body": [
-			"{% static '$1' %}$0"
-		],
-		"description": "Adds Static File Block"
-    }
+  "Django - Url Tags": {
+    "scope": "html",
+    "prefix": "ptd-url",
+    "body": ["{% url '$1' $2%}$0"],
+    "description": "Adds Django URL block"
+  },
+
+  "Django - Load Tags": {
+    "scope": "html",
+    "prefix": "ptd-load",
+    "body": ["{% load $1 %}$0"],
+    "description": "Adds Load Block"
+  },
+
+  "Django - Static File": {
+    "scope": "html",
+    "prefix": "ptd-stat",
+    "body": ["{% static '$1' %}$0"],
+    "description": "Adds Static File Block"
+  },
+
+  "Django - Include Tags": {
+    "scope": "html",
+    "prefix": "ptd-inc",
+    "body": ["{% include '$1' %}$0"],
+    "description": "Adds Include File Block"
+  }
 }
