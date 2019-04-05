@@ -59,6 +59,7 @@ Prefix | Output
 ptd-url | {% url ' `*` ' `*2` %}
 ptd-load | {% load `*` %}
 ptd-stat | {% static ' `*` ' %}
+ptd-inc | {% include ' `*` ' %}
 
 ## Release Notes
 
