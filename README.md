@@ -73,6 +73,6 @@ ptd-inc | {% include ' `*` ' %}
 
 ---
 
-This snippet was authored by [Ricky White](https://rickywhite.net/), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues).
+This snippet was authored by [Ricky White](https://rickywhite.dev/), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues).
 
 **Happy Coding!**
