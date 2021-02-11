@@ -17,5 +17,14 @@
 			"{% endmacro %}"
 		],
 		"description": "Adds macro tags"
+	},
+
+	"Jinja - Comments": {
+		"scope": "html",
+		"prefix": "ptj-com",
+		"body": [
+			"{# $0 #}"
+		],
+		"description": "Adds Jinja comment"
 	}
 }

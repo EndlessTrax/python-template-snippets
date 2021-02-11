@@ -51,6 +51,7 @@ Prefix | Output
 -------|-------
 ptj-url | {{ url_for('static', filename=' `*` ') }}
 ptj-mac | {% macro `*` %} {% endmacro %}
+ptj-com | {# `*` #}
 
 ### Django Specific Snippets
 
