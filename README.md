@@ -64,13 +64,7 @@ ptd-inc | {% include ' `*` ' %}
 
 ## Release Notes
 
-### 1.1
-
-- Extra Snippet added. See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/blob/master/CHANGELOG.md)
-
-### 1.0.0
-
-- Initial release! Yay me!
+See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/blob/master/CHANGELOG.md)
 
 ---
 
