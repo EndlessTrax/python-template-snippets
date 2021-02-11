@@ -68,6 +68,8 @@ See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/blob
 
 ---
 
-This snippet was authored by [Ricky White](https://rickywhite.dev/), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues).
+This snippet was authored by [Ricky White](https://twitter.com/endlesstrax), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues). 
+
+If you'd like to sponsor the developwment of this extension, please consider [sponsoring me on GitHub](https://github.com/sponsors/EndlessTrax)
 
 **Happy Coding!**
