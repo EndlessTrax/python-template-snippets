@@ -2,6 +2,10 @@
 
 See below for details of all version changes and upgrades.
 
+## [v1.3]
+
+- Added Jinja `set` snippet as per [issue #6](https://github.com/EndlessTrax/python-template-snippets/issues/6)
+
 ## [v1.2]
 
 - Added Jinja comment snippet as per [issue #4](https://github.com/EndlessTrax/python-template-snippets/issues/4)
