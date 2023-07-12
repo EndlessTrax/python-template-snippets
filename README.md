@@ -2,7 +2,7 @@
 
 This VS Code snippet extension includes snippets for both the Jinja2 and Django template engines.
 
-Quickly add snippets to HTML template files in your project. 
+Quickly add snippets to HTML template files in your project.
 
 If there is a snippet that is not included in this extension, please open an issue on the [repo here](https://github.com/EndlessTrax/python-template-snippets).
 
@@ -52,6 +52,7 @@ Prefix | Output
 ptj-url | {{ url_for('static', filename=' `*` ') }}
 ptj-mac | {% macro `*` %} {% endmacro %}
 ptj-com | {# `*` #}
+ptj-set | {% set `*` = `*2` %}
 
 ### Django Specific Snippets
 
@@ -68,7 +69,7 @@ See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/blob
 
 ---
 
-This snippet was authored by [Ricky White](https://twitter.com/endlesstrax), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues). 
+This snippet was authored by [Ricky White](https://twitter.com/endlesstrax), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues).
 
 If you'd like to sponsor the developwment of this extension, please consider [sponsoring me on GitHub](https://github.com/sponsors/EndlessTrax)
 

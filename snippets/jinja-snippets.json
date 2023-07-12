@@ -26,5 +26,13 @@
 			"{# $0 #}"
 		],
 		"description": "Adds Jinja comment"
+	},
+	"Jinja - Set Variable": {
+		"scope": "html",
+		"prefix": "ptj-set",
+		"body": [
+			"{% set $1 = $2 %}"
+		],
+		"description": "Adds Jinja set variable"
 	}
 }
