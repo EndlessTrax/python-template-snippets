@@ -10,7 +10,7 @@
         "Flask",
         "Web Development"
     ],
-    "version": "1.3.0",
+    "version": "1.4.0",
     "publisher": "RickyWhite",
     "license": "MIT",
     "engines": {
@@ -55,5 +55,8 @@
         "type": "git",
         "url": "https://github.com/EndlessTrax/python-template-snippets"
     },
-    "homepage": "https://github.com/EndlessTrax/python-template-snippets/blob/master/README.md"
+    "homepage": "https://github.com/EndlessTrax/python-template-snippets/blob/master/README.md",
+    "devDependencies": {
+        "@vscode/vsce": "^3.2.1"
+    }
 }
