@@ -44,7 +44,9 @@ jobs:
         run: vsce package
 
       - name: Publish to VS Code Marketplace
-        run: vsce publish -p ${{ secrets.MARKETPLACE_TOKEN }}
+        run: vsce publish
+        env:
+          VSCE_PAT: ${{ secrets.MARKETPLACE_TOKEN }}
 
       - name: Create GitHub Release
         run: |
