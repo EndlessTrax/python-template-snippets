@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Install vsce
-        run: npm install -g @vscode/vsce
-
       - name: Get version from tag
         id: get_version
         run: echo "VERSION=${GITHUB_REF#refs/tags/v}" >> $GITHUB_OUTPUT
@@ -41,7 +38,7 @@ jobs:
           fi
 
       - name: Package extension
-        run: npx @vscode/vsce package
+        run: npx vsce package
 
       - name: Publish to VS Code Marketplace
         run: vsce publish
