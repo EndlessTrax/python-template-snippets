@@ -180,9 +180,9 @@ When requesting a new snippet, please include:
 
 ---
 
-## 📝 Changelog
+## 📝 Release Notes
 
-See [CHANGELOG.md](CHANGELOG.md) for a detailed version history.
+See [GitHub Releases](https://github.com/EndlessTrax/python-template-snippets/releases) for the detailed version history and changelog.
 
 ---
 
