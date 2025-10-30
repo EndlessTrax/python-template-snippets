@@ -62,6 +62,7 @@ ptd-url | {% url ' `*` ' `*2` %}
 ptd-load | {% load `*` %}
 ptd-stat | {% static ' `*` ' %}
 ptd-inc | {% include ' `*` ' %}
+ptd-firstof | {% firstof `*` `*2` %}
 
 ## Release Notes
 

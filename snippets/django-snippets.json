@@ -25,5 +25,12 @@
     "prefix": "ptd-inc",
     "body": ["{% include '$1' %}$0"],
     "description": "Adds Include File Block"
+  },
+
+  "Django - Firstof Tags": {
+    "scope": "html",
+    "prefix": "ptd-firstof",
+    "body": ["{% firstof $1 $2 %}$0"],
+    "description": "Adds Firstof Block"
   }
 }
