@@ -41,7 +41,7 @@ jobs:
         run: npx vsce package
 
       - name: Publish to VS Code Marketplace
-        run: vsce publish
+        run: npx vsce publish
         env:
           VSCE_PAT: ${{ secrets.MARKETPLACE_TOKEN }}
 
