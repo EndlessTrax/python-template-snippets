@@ -47,8 +47,8 @@ jobs:
 
       - name: Create GitHub Release
         run: |
-          gh release create v${{ steps.get_version.outputs.VERSION }} \
-            --title "Release v${{ steps.get_version.outputs.VERSION }}" \
+          gh release create ${{ github.ref_name }} \
+            --title "Release ${{ github.ref_name }}" \
             --generate-notes \
             *.vsix
         env:
