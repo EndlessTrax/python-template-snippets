@@ -12,12 +12,28 @@
     ],
     "version": "1.3.0",
     "publisher": "RickyWhite",
+    "license": "MIT",
     "engines": {
-        "vscode": "^1.28.0"
+        "vscode": "^1.84.0"
     },
     "categories": [
         "Snippets"
     ],
+    "galleryBanner": {
+        "color": "#0d1117",
+        "theme": "dark"
+    },
+    "badges": [
+        {
+            "url": "https://img.shields.io/github/stars/EndlessTrax/python-template-snippets?style=social",
+            "href": "https://github.com/EndlessTrax/python-template-snippets",
+            "description": "Star on GitHub"
+        }
+    ],
+    "sponsor": {
+        "url": "https://github.com/sponsors/EndlessTrax"
+    },
+    "qna": "marketplace",
     "contributes": {
         "snippets": [
             {

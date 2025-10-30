@@ -1,4 +1,15 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.gitattributes
+.git/**
+.github/**
 vsc-extension-quickstart.md
+**/*.map
+**/.DS_Store
+**/node_modules/**
+**/coverage/**
+**/test/**
+**/*.vsix
+CHANGELOG.md
+LICENSE
