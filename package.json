@@ -6,11 +6,11 @@
         "Python",
         "Snippets",
         "Django",
-        "Jinja2", 
+        "Jinja2",
         "Flask",
         "Web Development"
     ],
-    "version": "1.4.0",
+    "version": "1.4.1",
     "publisher": "RickyWhite",
     "license": "MIT",
     "engines": {
