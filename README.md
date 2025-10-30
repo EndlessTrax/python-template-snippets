@@ -1,77 +1,220 @@
-# Python Template Snippets
+<div align="center">
+  <img src="logo.png" alt="Python Template Snippets Logo" width="200"/>
+  
+  # Python Template Snippets
 
-This VS Code snippet extension includes snippets for both the Jinja2 and Django template engines.
+  ✨ **Supercharge your template development workflow** ✨
 
-Quickly add snippets to HTML template files in your project.
+  A comprehensive VS Code snippet collection for **Jinja2** and **Django** template engines.
 
-If there is a snippet that is not included in this extension, please open an issue on the [repo here](https://github.com/EndlessTrax/python-template-snippets).
+  [![GitHub stars](https://img.shields.io/github/stars/EndlessTrax/python-template-snippets?style=social)](https://github.com/EndlessTrax/python-template-snippets)
+  [![VS Code Marketplace](https://img.shields.io/badge/VS%20Code-Marketplace-blue?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=RickyWhite.python-template-snippets)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## Setup
-
-Just hit install!
-
-If installing this extension directly from the repo, copy it into your local `<user home>/.vscode/extensions` folder and restart VS Code.
-
-Works best with `editor.tabCompletion` enabled (`on`) in your VS Code `Settings`.
-
-## Usage
-
-Simply type `pt` to start using any of the snippets. The full documentation is below.
-
-This extension works best with `editor.tabCompletion` enabled (`on`) in your VS Code `Settings`.
-
-## Changelog
-
-The full changelog can be found [here](CHANGELOG.md).
-
-## Documentation
-
-See the tables below for general, jinja, django snippets. The `*` denotes where the cursor will start so you can start typing your variables etc. straight the way without wasting key strokes! A `*2` denotes the second position upon hitting the `tab` key again.
-
-### General Snippets
-
-Prefix | Output
--------|-------
-ptnew | Creates a simple base template for any Jinja/Django HTML file
-ptvar | {{ `*` }}
-ptfilt | {{ `* | *2` }}
-ptcode | {% `*` %}
-ptblock | {% block `*` %} {% endblock `*` %}
-ptext | {% extends ' `*` ' %}
-ptsup | {{ `super()` }}
-ptfor | Adds a `for` loop block
-ptif | Adds an `if` statement block
-ptifel | Adds an `if/else` statement block
-ptelif | Adds an `if/elif/else` statement block
-ptwith | Adds a `with` statement block
-
-### Jinja Specific Snippets
-
-Prefix | Output
--------|-------
-ptj-url | {{ url_for('static', filename=' `*` ') }}
-ptj-mac | {% macro `*` %} {% endmacro %}
-ptj-com | {# `*` #}
-ptj-set | {% set `*` = `*2` %}
-
-### Django Specific Snippets
-
-Prefix | Output
--------|-------
-ptd-url | {% url ' `*` ' `*2` %}
-ptd-load | {% load `*` %}
-ptd-stat | {% static ' `*` ' %}
-ptd-inc | {% include ' `*` ' %}
-ptd-firstof | {% firstof `*` `*2` %}
-
-## Release Notes
-
-See the [Changelog](https://github.com/EndlessTrax/python-template-snippets/blob/master/CHANGELOG.md)
+</div>
 
 ---
 
-This snippet was authored by [Ricky White](https://twitter.com/endlesstrax), and is an open-source extension. Please help to improve this by [submitting issues here](https://github.com/EndlessTrax/python-template-snippets/issues).
+## 🚀 Why Use This Extension?
 
-If you'd like to sponsor the developwment of this extension, please consider [sponsoring me on GitHub](https://github.com/sponsors/EndlessTrax)
+Writing template code can be tedious with all those brackets, tags, and syntax. This extension eliminates the repetitive typing by providing **smart, tab-completion snippets** for common Jinja2 and Django template patterns.
 
-**Happy Coding!**
+**Stop typing this:**
+```html
+{% for item in items %}
+  <!-- your code -->
+{% endfor %}
+```
+
+**Start typing this:**
+```
+ptfor → Tab → Fill in the blanks!
+```
+
+### ✨ Features
+
+- 🎯 **20+ carefully crafted snippets** for Jinja2 and Django
+- ⚡ **Lightning-fast** - Type `pt` prefix and let IntelliSense do the rest
+- 🎨 **Smart cursor positioning** - Jump to exactly where you need to type
+- 🔄 **Multi-cursor support** - Tab between placeholders seamlessly
+- 🛠️ **Framework-agnostic** - Works with Flask, Django, FastAPI, and any Python web framework
+- 📦 **Zero configuration** - Works out of the box
+
+---
+
+## 📦 Installation
+
+### From VS Code Marketplace (Recommended)
+
+1. Open VS Code
+2. Press `Ctrl+P` / `Cmd+P`
+3. Type `ext install RickyWhite.python-template-snippets`
+4. Press Enter and reload VS Code
+
+### Manual Installation
+
+1. Download the latest `.vsix` from [Releases](https://github.com/EndlessTrax/python-template-snippets/releases)
+2. Open VS Code
+3. Go to Extensions (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+4. Click the `...` menu → `Install from VSIX`
+5. Select the downloaded file
+
+---
+
+## 🎯 Quick Start
+
+1. Open any HTML file in VS Code
+2. Type `pt` to see available snippets
+3. Select a snippet from the IntelliSense menu (or type the full prefix)
+4. Press `Tab` to trigger the snippet
+5. Fill in the placeholders and press `Tab` to jump between them
+
+### 💡 Pro Tip
+Enable tab completion in your VS Code settings for the best experience:
+```json
+{
+  "editor.tabCompletion": "on"
+}
+```
+
+---
+
+## 📚 Snippet Reference
+
+All snippets use the `pt` prefix (short for "Python Template"). Here's the complete reference:
+
+### 🌐 General Snippets
+*Works with both Jinja2 and Django*
+
+| Prefix | Description | Output |
+|--------|-------------|---------|
+| `ptnew` | New HTML template file | Complete template with extends and blocks |
+| `ptvar` | Template variable | `{{ variable }}` |
+| `ptfilt` | Variable with filter | `{{ variable \| filter }}` |
+| `ptcode` | Code block tag | `{% code %}` |
+| `ptblock` | Block tag | `{% block name %}...{% endblock %}` |
+| `ptext` | Extends tag | `{% extends 'base.html' %}` |
+| `ptsup` | Super function | `{{ super() }}` |
+| `ptfor` | For loop | `{% for item in items %}...{% endfor %}` |
+| `ptif` | If statement | `{% if condition %}...{% endif %}` |
+| `ptifel` | If/else statement | `{% if %}...{% else %}...{% endif %}` |
+| `ptelif` | If/elif/else statement | `{% if %}...{% elif %}...{% else %}...{% endif %}` |
+| `ptwith` | With statement | `{% with variable %}...{% endwith %}` |
+
+### 🔧 Jinja2-Specific Snippets
+*For Flask, FastAPI, and other Jinja2 projects*
+
+| Prefix | Description | Output |
+|--------|-------------|---------|
+| `ptj-url` | Static file URL | `{{ url_for('static', filename='file.css') }}` |
+| `ptj-mac` | Macro definition | `{% macro name %}...{% endmacro %}` |
+| `ptj-com` | Comment | `{# comment #}` |
+| `ptj-set` | Set variable | `{% set var = value %}` |
+
+### 🎨 Django-Specific Snippets
+*For Django projects*
+
+| Prefix | Description | Output |
+|--------|-------------|---------|
+| `ptd-url` | URL tag | `{% url 'view-name' args %}` |
+| `ptd-load` | Load tag library | `{% load static %}` |
+| `ptd-stat` | Static file | `{% static 'path/to/file' %}` |
+| `ptd-inc` | Include template | `{% include 'template.html' %}` |
+| `ptd-firstof` | First of variables | `{% firstof var1 var2 %}` |
+
+---
+
+## 💻 Usage Examples
+
+### Creating a New Template
+
+Type `ptnew` and press Tab:
+
+```html
+{% extends 'base.html' %}
+
+{% block content %}
+  <!-- Your cursor starts here -->
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}
+```
+
+### Adding a For Loop
+
+Type `ptfor` and press Tab:
+
+```html
+{% for item in items %}
+  <!-- Your cursor starts here -->
+{% endfor %}
+```
+
+Then tab through: `item` → `items` → loop body
+
+### Django Static File
+
+Type `ptd-stat` and press Tab:
+
+```html
+{% static 'css/style.css' %}
+```
+
+---
+
+## 🤝 Contributing
+
+Found a bug? Want a new snippet? Contributions are welcome!
+
+1. **Report Issues**: [Open an issue](https://github.com/EndlessTrax/python-template-snippets/issues)
+2. **Request Features**: Have an idea? Share it!
+3. **Submit PRs**: Fork, code, and submit a pull request
+
+### Suggesting New Snippets
+
+When requesting a new snippet, please include:
+- The template syntax you want added
+- Which framework it's for (Jinja2/Django/both)
+- A brief description of what it does
+
+---
+
+## 📝 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for a detailed version history.
+
+---
+
+## 💖 Support This Project
+
+This extension is free and open source. If you find it helpful, consider:
+
+- ⭐ [Starring the repo](https://github.com/EndlessTrax/python-template-snippets)
+- 💰 [Sponsoring on GitHub](https://github.com/sponsors/EndlessTrax)
+- 🐦 [Sharing on social media](https://twitter.com/intent/tweet?text=Check%20out%20Python%20Template%20Snippets%20for%20VS%20Code!&url=https://github.com/EndlessTrax/python-template-snippets)
+- 📝 [Writing a review](https://marketplace.visualstudio.com/items?itemName=RickyWhite.python-template-snippets&ssr=false#review-details)
+
+---
+
+## 📜 License
+
+MIT © [Ricky White](https://github.com/EndlessTrax)
+
+---
+
+## 🙏 Acknowledgments
+
+Created and maintained by [Ricky White](https://twitter.com/endlesstrax)
+
+Special thanks to all [contributors](https://github.com/EndlessTrax/python-template-snippets/graphs/contributors) who have helped improve this extension!
+
+---
+
+<div align="center">
+
+**Happy Coding! 🎉**
+
+Made with ❤️ for the Python community
+
+</div>
