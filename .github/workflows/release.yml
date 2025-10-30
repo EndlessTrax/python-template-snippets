@@ -41,7 +41,7 @@ jobs:
           fi
 
       - name: Package extension
-        run: vsce package
+        run: npx @vscode/vsce package
 
       - name: Publish to VS Code Marketplace
         run: vsce publish
