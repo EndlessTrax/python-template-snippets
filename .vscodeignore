@@ -11,5 +11,3 @@ vsc-extension-quickstart.md
 **/coverage/**
 **/test/**
 **/*.vsix
-CHANGELOG.md
-LICENSE
