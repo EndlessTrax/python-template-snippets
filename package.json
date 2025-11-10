@@ -57,6 +57,6 @@
     },
     "homepage": "https://github.com/EndlessTrax/python-template-snippets/blob/master/README.md",
     "devDependencies": {
-        "@vscode/vsce": "^3.2.1"
+        "@vscode/vsce": "^3.7.0"
     }
 }
