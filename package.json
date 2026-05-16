@@ -10,7 +10,7 @@
         "Flask",
         "Web Development"
     ],
-    "version": "1.4.2",
+    "version": "1.4.3",
     "publisher": "RickyWhite",
     "license": "MIT",
     "engines": {
