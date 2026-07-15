@@ -11,6 +11,11 @@ updates:
       interval: "weekly"
     reviewers:
       - "endlesstrax"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -18,3 +23,8 @@ updates:
       interval: "weekly"
     reviewers:
       - "endlesstrax"
+    groups:
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
