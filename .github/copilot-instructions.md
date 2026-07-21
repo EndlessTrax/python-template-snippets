@@ -39,6 +39,8 @@ npx vsce package
 
 Releases are triggered by pushing a `v*` tag. Before creating a release tag, keep the tag version exactly equal to `package.json`'s `version`; the workflow fails when they differ. It then packages and publishes the extension to the VS Code Marketplace and attaches the generated VSIX to the GitHub release.
 
+Agents must not create releases or push tags. Both actions are maintainer-only responsibilities.
+
 ## Commit and pull request titles
 
 Use Conventional Commits strictly for every commit message and pull request title (for example, `feat: add Django cycle snippet` or `fix: correct Jinja static URL placeholder`).
