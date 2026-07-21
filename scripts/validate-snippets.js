@@ -44,7 +44,11 @@ for (const catalog of catalogs) {
         const rawCatalog = fs.readFileSync(absolutePath, "utf8");
         parsedCatalog = JSON.parse(rawCatalog);
     } catch (error) {
-        addError(`${catalog.path}: invalid JSON (${error.message})`);
+        if (error && error.code) {
+            addError(`${catalog.path}: failed to read file (${error.message})`);
+        } else {
+            addError(`${catalog.path}: invalid JSON (${error.message})`);
+        }
         continue;
     }
 
