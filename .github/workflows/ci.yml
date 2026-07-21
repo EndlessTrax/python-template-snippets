@@ -1,0 +1,27 @@
+name: PR CI
+
+on:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate snippet catalogs
+        run: node -e "for (const f of ['snippets/snippets.json','snippets/jinja-snippets.json','snippets/django-snippets.json']) JSON.parse(require('fs').readFileSync(f, 'utf8'))"
+
+      - name: Package extension
+        run: npx vsce package

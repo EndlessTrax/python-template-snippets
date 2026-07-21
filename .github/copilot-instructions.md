@@ -20,7 +20,7 @@ The extension has no activation code. Changes to a snippet catalog take effect t
 
 ## Commands
 
-There are no npm scripts, automated tests, or lint configuration. There is consequently no single-test command.
+There are no npm scripts, automated tests, or lint configuration. The PR workflow mirrors these local validation commands:
 
 ```bash
 # Install the locked packaging dependency
@@ -33,7 +33,11 @@ node -e "for (const f of ['snippets/snippets.json','snippets/jinja-snippets.json
 npx vsce package
 ```
 
-`npx vsce package` creates a `.vsix` file in the repository root; it is ignored by Git. The release workflow runs this same packaging command with Node.js 20.
+`npx vsce package` creates a `.vsix` file in the repository root; it is ignored by Git. The PR workflow runs the same commands on Node.js 20, and the release workflow uses `npx vsce package` for tag publishes.
+
+## Pull request checks
+
+PRs should keep the snippet catalogs parseable and the package manifest valid. The CI workflow runs `npm ci`, JSON parsing for all three snippet catalogs, and `npx vsce package` on every pull request.
 
 ## Releases
 
