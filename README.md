@@ -92,6 +92,7 @@ All snippets use the `pt` prefix (short for "Python Template"). Here's the compl
 | `ptvar` | Template variable | `{{ variable }}` |
 | `ptfilt` | Variable with filter | `{{ variable \| filter }}` |
 | `ptcode` | Code block tag | `{% code %}` |
+| `ptcom` | Comment | `{# comment #}` |
 | `ptblock` | Block tag | `{% block name %}...{% endblock %}` |
 | `ptext` | Extends tag | `{% extends 'base.html' %}` |
 | `ptsup` | Super function | `{{ super() }}` |
@@ -108,7 +109,6 @@ All snippets use the `pt` prefix (short for "Python Template"). Here's the compl
 |--------|-------------|---------|
 | `ptj-url` | Static file URL | `{{ url_for('static', filename='file.css') }}` |
 | `ptj-mac` | Macro definition | `{% macro name %}...{% endmacro %}` |
-| `ptj-com` | Comment | `{# comment #}` |
 | `ptj-set` | Set variable | `{% set var = value %}` |
 
 ### 🎨 Django-Specific Snippets

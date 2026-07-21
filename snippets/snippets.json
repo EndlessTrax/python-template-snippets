@@ -42,6 +42,15 @@
 		"description": "Adds code block tags"
 	},
 
+	"Template Comment": {
+		"scope": "html",
+		"prefix": "ptcom",
+		"body": [
+			"{# $0 #}"
+		],
+		"description": "Adds template comment tag"
+	},
+
 	"Template Block Tag": {
 		"scope": "html",
 		"prefix": "ptblock",

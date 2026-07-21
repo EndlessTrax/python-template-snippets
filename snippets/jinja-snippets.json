@@ -19,14 +19,6 @@
 		"description": "Adds macro tags"
 	},
 
-	"Jinja - Comments": {
-		"scope": "html",
-		"prefix": "ptj-com",
-		"body": [
-			"{# $0 #}"
-		],
-		"description": "Adds Jinja comment"
-	},
 	"Jinja - Set Variable": {
 		"scope": "html",
 		"prefix": "ptj-set",
