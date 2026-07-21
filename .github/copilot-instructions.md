@@ -20,14 +20,14 @@ The extension has no activation code. Changes to a snippet catalog take effect t
 
 ## Commands
 
-There are no npm scripts, automated tests, or lint configuration. The PR workflow mirrors these local validation commands:
+There is no lint configuration. The PR workflow mirrors these local validation commands:
 
 ```bash
 # Install the locked packaging dependency
 npm ci
 
-# Validate all snippet catalogs parse as JSON
-node -e "for (const f of ['snippets/snippets.json','snippets/jinja-snippets.json','snippets/django-snippets.json']) JSON.parse(require('fs').readFileSync(f, 'utf8'))"
+# Validate snippet catalogs and snippet metadata rules
+npm test
 
 # Build a VSIX package (also validates the extension manifest)
 npx vsce package
@@ -37,7 +37,7 @@ npx vsce package
 
 ## Pull request checks
 
-PRs should keep the snippet catalogs parseable and the package manifest valid. The CI workflow runs `npm ci`, JSON parsing for all three snippet catalogs, and `npx vsce package` on every pull request.
+PRs should keep snippet catalogs and metadata valid, and the package manifest valid. The CI workflow runs `npm ci`, `npm test`, and `npx vsce package` on every pull request.
 
 ## Releases
 
