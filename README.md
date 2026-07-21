@@ -121,6 +121,11 @@ All snippets use the `pt` prefix (short for "Python Template"). Here's the compl
 | `ptd-stat` | Static file | `{% static 'path/to/file' %}` |
 | `ptd-inc` | Include template | `{% include 'template.html' %}` |
 | `ptd-firstof` | First of variables | `{% firstof var1 var2 %}` |
+| `ptd-csrf` | CSRF token | `{% csrf_token %}` |
+| `ptd-sup` | Block super | `{{ block.super }}` |
+| `ptd-com` | Comment block | `{% comment "note" %}...{% endcomment %}` |
+| `ptd-ver` | Verbatim block | `{% verbatim %}...{% endverbatim %}` |
+| `ptd-trans` | Translate string | `{% translate "..." %}` |
 
 ---
 
