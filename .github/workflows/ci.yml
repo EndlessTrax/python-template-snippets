@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Validate snippet catalogs
-        run: node -e "for (const f of ['snippets/snippets.json','snippets/jinja-snippets.json','snippets/django-snippets.json']) JSON.parse(require('fs').readFileSync(f, 'utf8'))"
+        run: npm test
 
       - name: Package extension
         run: npx vsce package

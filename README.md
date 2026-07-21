@@ -176,7 +176,7 @@ Found a bug? Want a new snippet? Contributions are welcome!
 Every pull request runs a small validation suite on Node.js 20:
 
 1. `npm ci`
-2. Parse all snippet catalogs as JSON
+2. `npm test` (JSON + snippet metadata validation)
 3. `npx vsce package`
 
 If you want to mirror CI locally before opening a PR, run the same commands from the repository root.

@@ -56,6 +56,9 @@
         "url": "https://github.com/EndlessTrax/python-template-snippets"
     },
     "homepage": "https://github.com/EndlessTrax/python-template-snippets/blob/master/README.md",
+    "scripts": {
+        "test": "node scripts/validate-snippets.js"
+    },
     "devDependencies": {
         "@vscode/vsce": "^3.9.2"
     }
