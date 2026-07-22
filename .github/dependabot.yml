@@ -9,6 +9,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     reviewers:
       - "endlesstrax"
     groups:
@@ -21,6 +23,8 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     reviewers:
       - "endlesstrax"
     groups:
