@@ -32,5 +32,48 @@
     "prefix": "ptd-firstof",
     "body": ["{% firstof $1 $2 %}$0"],
     "description": "Adds Firstof Block"
+  },
+
+  "Django - CSRF Token": {
+    "scope": "html",
+    "prefix": "ptd-csrf",
+    "body": ["{% csrf_token %}$0"],
+    "description": "Adds CSRF Token block"
+  },
+
+  "Django - Block Super": {
+    "scope": "html",
+    "prefix": "ptd-sup",
+    "body": ["{{ block.super }}$0"],
+    "description": "Access parent block content"
+  },
+
+  "Django - Comment Block": {
+    "scope": "html",
+    "prefix": "ptd-com",
+    "body": [
+      "{% comment '$1' %}",
+      "\t$0",
+      "{% endcomment %}"
+    ],
+    "description": "Adds Django comment block"
+  },
+
+  "Django - Verbatim Block": {
+    "scope": "html",
+    "prefix": "ptd-ver",
+    "body": [
+      "{% verbatim %}",
+      "\t$0",
+      "{% endverbatim %}"
+    ],
+    "description": "Prevents Django from rendering contents (useful for JS frameworks)"
+  },
+
+  "Django - Translate": {
+    "scope": "html",
+    "prefix": "ptd-trans",
+    "body": ["{% translate '$1' %}$0"],
+    "description": "Translate string"
   }
 }
