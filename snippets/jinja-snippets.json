@@ -34,7 +34,7 @@
 		"body": [
 			"{% import '${1:filename}.html' as ${2:name} %}$0"
 		],
-		"description": "Import macro from file"
+		"description": "Import macros from template as a namespace"
 	},
 
 	"Jinja - From Import Macro": {
