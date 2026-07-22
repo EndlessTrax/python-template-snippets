@@ -125,7 +125,7 @@ All snippets use the `pt` prefix (short for "Python Template"). Here's the compl
 | `ptd-sup` | Block super | `{{ block.super }}` |
 | `ptd-com` | Comment block | `{% comment 'note' %}...{% endcomment %}` |
 | `ptd-ver` | Verbatim block | `{% verbatim %}...{% endverbatim %}` |
-| `ptd-trans` | Translate string | `{% translate "..." %}` |
+| `ptd-trans` | Translate string | `{% translate '...' %}` |
 
 ---
 
