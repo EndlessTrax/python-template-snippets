@@ -52,7 +52,7 @@
     "scope": "html",
     "prefix": "ptd-com",
     "body": [
-      "{% comment \"$1\" %}",
+      "{% comment '$1' %}",
       "\t$0",
       "{% endcomment %}"
     ],
