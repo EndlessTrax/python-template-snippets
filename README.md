@@ -110,6 +110,10 @@ All snippets use the `pt` prefix (short for "Python Template"). Here's the compl
 | `ptj-url` | Static file URL | `{{ url_for('static', filename='file.css') }}` |
 | `ptj-mac` | Macro definition | `{% macro name %}...{% endmacro %}` |
 | `ptj-set` | Set variable | `{% set var = value %}` |
+| `ptj-imp` | Import macro | `{% import 'file.html' as name %}` |
+| `ptj-from` | From import macro | `{% from 'file.html' import macro %}` |
+| `ptj-raw` | Raw block | `{% raw %}...{% endraw %}` |
+| `ptj-fil` | Filter block | `{% filter name %}...{% endfilter %}` |
 
 ### 🎨 Django-Specific Snippets
 *For Django projects*
