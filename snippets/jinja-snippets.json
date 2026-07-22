@@ -26,5 +26,45 @@
 			"{% set $1 = $2 %}"
 		],
 		"description": "Adds Jinja set variable"
+	},
+
+	"Jinja - Import Macro": {
+		"scope": "html",
+		"prefix": "ptj-imp",
+		"body": [
+			"{% import '${1:filename}.html' as ${2:name} %}$0"
+		],
+		"description": "Import macros from template as a namespace"
+	},
+
+	"Jinja - From Import Macro": {
+		"scope": "html",
+		"prefix": "ptj-from",
+		"body": [
+			"{% from '${1:filename}.html' import ${2:macro} %}$0"
+		],
+		"description": "Import specific macro from file"
+	},
+
+	"Jinja - Raw Block": {
+		"scope": "html",
+		"prefix": "ptj-raw",
+		"body": [
+			"{% raw %}",
+			"\t$0",
+			"{% endraw %}"
+		],
+		"description": "Escape Jinja template tags (useful for JS frameworks)"
+	},
+
+	"Jinja - Filter Block": {
+		"scope": "html",
+		"prefix": "ptj-fil",
+		"body": [
+			"{% filter ${1:filter_name} %}",
+			"\t$0",
+			"{% endfilter %}"
+		],
+		"description": "Filter a block of template code"
 	}
 }
