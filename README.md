@@ -123,7 +123,7 @@ All snippets use the `pt` prefix (short for "Python Template"). Here's the compl
 | `ptd-firstof` | First of variables | `{% firstof var1 var2 %}` |
 | `ptd-csrf` | CSRF token | `{% csrf_token %}` |
 | `ptd-sup` | Block super | `{{ block.super }}` |
-| `ptd-com` | Comment block | `{% comment "note" %}...{% endcomment %}` |
+| `ptd-com` | Comment block | `{% comment 'note' %}...{% endcomment %}` |
 | `ptd-ver` | Verbatim block | `{% verbatim %}...{% endverbatim %}` |
 | `ptd-trans` | Translate string | `{% translate "..." %}` |
 
