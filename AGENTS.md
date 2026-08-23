@@ -1,6 +1,6 @@
 # Python Template Snippets
 
-## Project structure
+## Project Structure
 
 This is a declarative VS Code snippets extension, not a Python application. `package.json` registers all three snippet catalogs for the `html` language scope:
 
@@ -10,7 +10,7 @@ This is a declarative VS Code snippets extension, not a Python application. `pac
 
 The extension has no activation code. Changes to a snippet catalog take effect through the `contributes.snippets` entries in `package.json`.
 
-## Snippet conventions
+## Snippet Conventions
 
 - Keep shared template syntax in `snippets/snippets.json`; add engine-specific syntax only to its matching Jinja or Django catalog.
 - Snippet prefixes are intentionally namespaced: shared snippets use `pt`, Jinja snippets use `ptj-`, and Django snippets use `ptd-`.
@@ -18,7 +18,7 @@ The extension has no activation code. Changes to a snippet catalog take effect t
 - Write `body` as an array of lines. Preserve VS Code snippet placeholders: numbered placeholders control tab order, repeated placeholder numbers mirror the same value, and `$0` is the final cursor position. Use `\t` for indentation and explicit `"\n"` elements for blank lines, following the existing catalog style.
 - Update the README snippet reference when adding, removing, renaming, or changing a user-visible prefix or generated output.
 
-## Commands
+## Commands & Validation
 
 There is no lint configuration. The PR workflow mirrors these local validation commands:
 
@@ -35,16 +35,16 @@ npx vsce package
 
 `npx vsce package` creates a `.vsix` file in the repository root; it is ignored by Git. The PR workflow runs the same commands on Node.js 20, and the release workflow uses `npx vsce package` for tag publishes.
 
-## Pull request checks
+## Pull Request Checks
 
 PRs should keep snippet catalogs and metadata valid, and the package manifest valid. The CI workflow runs `npm ci`, `npm test`, and `npx vsce package` on every pull request.
 
-## Releases
+## Releases & Boundaries
 
 Releases are triggered by pushing a `v*` tag. Before creating a release tag, keep the tag version exactly equal to `package.json`'s `version`; the workflow fails when they differ. It then packages and publishes the extension to the VS Code Marketplace and attaches the generated VSIX to the GitHub release.
 
 Agents must not create releases or push tags. Both actions are maintainer-only responsibilities.
 
-## Commit and pull request titles
+## Commit and Pull Request Titles
 
 Use Conventional Commits strictly for every commit message and pull request title (for example, `feat: add Django cycle snippet` or `fix: correct Jinja static URL placeholder`).
