@@ -36,6 +36,72 @@ function validateRequiredString(snippet, fieldName) {
     return typeof snippet[fieldName] === "string" && snippet[fieldName].trim().length > 0;
 }
 
+const expectedRegistrations = {
+    html: catalogs.map((catalog) => catalog.path),
+    "django-html": ["snippets/snippets.json", "snippets/django-snippets.json"],
+    jinja: ["snippets/snippets.json", "snippets/jinja-snippets.json"],
+    "jinja-html": ["snippets/snippets.json", "snippets/jinja-snippets.json"],
+};
+const seenRegistrations = new Set();
+
+try {
+    const manifest = JSON.parse(fs.readFileSync("package.json", "utf8"));
+    const registrations = manifest.contributes && manifest.contributes.snippets;
+
+    if (!Array.isArray(registrations)) {
+        addError("package.json: contributes.snippets must be an array");
+    } else {
+        for (const registration of registrations) {
+            if (!registration || typeof registration !== "object" || Array.isArray(registration)) {
+                addError("package.json: each snippet registration must be an object");
+                continue;
+            }
+
+            const { language, path: snippetPath } = registration;
+            if (
+                !validateRequiredString(registration, "language") ||
+                !Object.hasOwn(expectedRegistrations, language)
+            ) {
+                addError(`package.json: invalid or unsupported snippet language "${language}"`);
+                continue;
+            }
+            if (!validateRequiredString(registration, "path")) {
+                addError(`package.json: missing or invalid snippet path for "${language}"`);
+                continue;
+            }
+
+            const normalizedPath = path.normalize(snippetPath).replaceAll(path.sep, "/");
+            const key = `${language}:${normalizedPath}`;
+            if (seenRegistrations.has(key)) {
+                addError(`package.json: duplicate snippet registration "${key}"`);
+            }
+            seenRegistrations.add(key);
+
+            try {
+                if (!fs.statSync(snippetPath).isFile()) {
+                    addError(`package.json: snippet path "${snippetPath}" must be a file`);
+                }
+            } catch (error) {
+                addError(`package.json: failed to read snippet file "${snippetPath}" (${error.message})`);
+            }
+
+            if (!expectedRegistrations[language].includes(normalizedPath)) {
+                addError(`package.json: unexpected snippet file "${snippetPath}" for "${language}"`);
+            }
+        }
+    }
+} catch (error) {
+    addError(`package.json: failed to read manifest (${error.message})`);
+}
+
+for (const [language, snippetPaths] of Object.entries(expectedRegistrations)) {
+    for (const snippetPath of snippetPaths) {
+        if (!seenRegistrations.has(`${language}:${snippetPath}`)) {
+            addError(`package.json: missing snippet registration "${language}:${snippetPath}"`);
+        }
+    }
+}
+
 for (const catalog of catalogs) {
     const absolutePath = path.resolve(catalog.path);
     let parsedCatalog;
@@ -112,4 +178,4 @@ if (errors.length > 0) {
     process.exit(1);
 }
 
-console.log(`Snippet validation passed (${catalogs.length} catalogs, ${seenPrefixes.size} prefixes checked).`);
+console.log(`Snippet validation passed (${catalogs.length} catalogs, ${seenPrefixes.size} prefixes, ${seenRegistrations.size} registrations checked).`);
