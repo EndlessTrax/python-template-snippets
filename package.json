@@ -47,6 +47,30 @@
             {
                 "language": "html",
                 "path": "./snippets/django-snippets.json"
+            },
+            {
+                "language": "django-html",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "django-html",
+                "path": "./snippets/django-snippets.json"
+            },
+            {
+                "language": "jinja",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "jinja",
+                "path": "./snippets/jinja-snippets.json"
+            },
+            {
+                "language": "jinja-html",
+                "path": "./snippets/snippets.json"
+            },
+            {
+                "language": "jinja-html",
+                "path": "./snippets/jinja-snippets.json"
             }
         ]
     },

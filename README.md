@@ -63,11 +63,24 @@ ptfor → Tab → Fill in the blanks!
 
 ## 🎯 Quick Start
 
-1. Open any HTML file in VS Code
+1. Open an HTML, Django, or Jinja template file in VS Code
 2. Type `pt` to see available snippets
 3. Select a snippet from the IntelliSense menu (or type the full prefix)
 4. Press `Tab` to trigger the snippet
 5. Fill in the placeholders and press `Tab` to jump between them
+
+### Supported Language Modes
+
+Snippets are available according to the file's VS Code language identifier:
+
+| Language ID | General snippets | Jinja snippets | Django snippets |
+|-------------|------------------|----------------|-----------------|
+| `html` | Yes | Yes | Yes |
+| `django-html` | Yes | No | Yes |
+| `jinja` | Yes | Yes | No |
+| `jinja-html` | Yes | Yes | No |
+
+For automatic template language recognition, you may need a language extension such as [Django](https://marketplace.visualstudio.com/items?itemName=batisteo.vscode-django), [Jinja](https://marketplace.visualstudio.com/items?itemName=wholroyd.jinja), or [Better Jinja](https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml). You can also select a supported language mode from VS Code's status bar once its language extension is installed. Filename extensions such as `.j2` depend on that extension's file associations; this snippet extension does not change them.
 
 ### 💡 Pro Tip
 Enable tab completion in your VS Code settings for the best experience:
@@ -185,7 +198,7 @@ Found a bug? Want a new snippet? Contributions are welcome!
 Every pull request runs a small validation suite on Node.js 20:
 
 1. `npm ci`
-2. `npm test` (JSON + snippet metadata validation)
+2. `npm test` (JSON + snippet metadata and language registration validation)
 3. `npx vsce package`
 
 If you want to mirror CI locally before opening a PR, run the same commands from the repository root.
