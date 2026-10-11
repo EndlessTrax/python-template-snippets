@@ -70,7 +70,7 @@ try {
                 continue;
             }
 
-            const normalizedPath = path.normalize(snippetPath);
+            const normalizedPath = path.normalize(snippetPath).replaceAll(path.sep, "/");
             const key = `${language}:${normalizedPath}`;
             if (seenRegistrations.has(key)) {
                 addError(`package.json: duplicate snippet registration "${key}"`);
